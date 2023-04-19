@@ -1,7 +1,7 @@
-import { User } from "./User";
-export interface UserManagement {
-    saveUser(user: User): void;
-    loadUser(id: string): void;
-    getUsers(): User[];
-    loadUserById(id:string):User;
+export interface UserManagement<T,X> {
+    saveUser(user:T): void;
+    loadUser(id: X): void;
+    getUsers(): T[];
+    loadUserById(id:X):T;
+    canSave():boolean;
 } 
